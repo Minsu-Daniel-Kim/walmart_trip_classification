@@ -1,0 +1,17 @@
+{
+    "contents" : "# Skeleton code of Walmart Trip Type Classification.\n# author: Daniel Minsu Kim\n\n#################### Project Directory Setup ########################\nlibrary(RCurl)\nlibrary(XML)\nlibrary(geosphere)\nlibrary(rattle)\nlibrary(party)\nlibrary(rpart.plot)\nlibrary(caret)\nlibrary(RColorBrewer)\nlibrary(dplyr)\nlibrary(rpart)\nlibrary(doMC)\nlibrary(lubridate)\nlibrary(ggplot2)\nlibrary(ggmap)\n# set up project folder, create necessary subdirectories\ndir.create(\"code\")\ndir.create(\"rawdata\")\ndir.create(\"data\")\ndir.create(\"resources\")\ndir.create(\"report\")\ndir.create(\"images\")\n# move files to corresponding folders\nfile.rename(from = \"preprocess.R\", to = \"code/preprocess.R\")\nfile.rename(from = \"utils.R\", to = \"code/utils.R\")\n\n######################## Data Retrieval ###############################\n\n\nwrite.csv(starAdd, file = \"rawdata/StarbucksAdd.csv\", row.names = FALSE)\n\n\n# save metadata about the raw data in rawdata subdirectory\nwrite.table(summary(crime), file = \"rawdata/metadata\", row.names = FALSE)\n\n#################### Load Utility and Plotting Functions & Clean Data ##########################\n# load utility functions and clean raw data\nsource(\"code/utils.R\")\nsource(\"code/utils2.R\")\nsource(\"code/preprocess.R\")\n\n\nsource(\"code/plotMaps.R\")\n\nsource(\"code/plotCrimeMinStarbucksDist.R\")\n# since this script runs all of ML algorithms, it takes time to import.\nsource(\"code/modeling.R\")",
+    "created" : 1450644966811.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1929525687",
+    "id" : "67439591",
+    "lastKnownWriteTime" : 1450645252,
+    "path" : "~/Documents/DataAnalysis/kaggle/walmart/skeleton.R",
+    "project_path" : "skeleton.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
