@@ -1,0 +1,7 @@
+
+Overall # of rows : 647054 
+# of TripType : 38
+distinct Department description : 69
+Upc : 97714
+# of distinct Vistnumber : 95674
+return : 14394
